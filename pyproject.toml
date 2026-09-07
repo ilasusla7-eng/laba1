@@ -26,4 +26,4 @@ warn_unused_ignores = true
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
-addopts = "--cov=src/text_analyzer --cov-report=term-missing"
+addopts = "--cov=text_analyzer.core --cov-report=term-missing"
