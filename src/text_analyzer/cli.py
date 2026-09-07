@@ -1,17 +1,15 @@
 """CLI entry point for text analyzer."""
 
 import argparse
-from pathlib import Path
 import sys
+from pathlib import Path
 
 from text_analyzer.core import analyze_text_file, format_output
 
 
 def main() -> None:
     """Parse CLI arguments and run analysis."""
-    parser = argparse.ArgumentParser(
-        description="ASCII Text Analyzer CLI Tool"
-    )
+    parser = argparse.ArgumentParser(description="ASCII Text Analyzer CLI Tool")
     parser.add_argument("path", type=Path, help="Path to text file")
     parser.add_argument(
         "--top", type=int, default=10, help="Number of top words to show"

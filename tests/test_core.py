@@ -1,6 +1,7 @@
 """Tests for text analyzer core functionality."""
 
 from pathlib import Path
+
 import pytest
 
 from text_analyzer.core import analyze_text_file, format_output
