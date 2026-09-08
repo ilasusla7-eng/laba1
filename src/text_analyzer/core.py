@@ -23,9 +23,9 @@ def analyze_text_file(
     # Разбиваем текст на слова и фильтруем по минимальной длине
     raw_words = content.split()
     words = [
-        word.strip(".,!?:;\"'()[]{}").lower()
+        word.strip(".,!?:;\"'()[]{}—").lower()
         for word in raw_words
-        if len(word.strip(".,!?:;\"'()[]{}")) >= min_len
+        if len(word.strip(".,!?:;\"'()[]{}—")) >= min_len
     ]
     word_count = len(words)
     counter = Counter(words)

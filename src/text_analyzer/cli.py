@@ -8,20 +8,20 @@ from text_analyzer.core import analyze_text_file, format_output
 
 
 def main() -> None:
-    """Parse CLI arguments and run analysis."""
+    """Парсинг CLI аргументов и запуск аналитики."""
     parser = argparse.ArgumentParser(description="ASCII Text Analyzer CLI Tool")
-    parser.add_argument("path", type=Path, help="Path to text file")
+    parser.add_argument("path", type=Path, help="Путь к текстовому файлу")
     parser.add_argument(
-        "--top", type=int, default=10, help="Number of top words to show"
+        "--top", type=int, default=10, help="Количество отображаемых слов в топе"
     )
     parser.add_argument(
-        "--min-len", type=int, default=1, help="Minimum word length filter"
+        "--min-len", type=int, default=1, help="Фильтр минимальной длины слова"
     )
     parser.add_argument(
         "--format",
         choices=["text", "json"],
         default="text",
-        help="Output format (text or json)",
+        help="Формат вывода (text или json)",
     )
     parser.add_argument(
         "--encoding", default="utf-8", help="File encoding (default: utf-8)"
